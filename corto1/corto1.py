@@ -16,7 +16,12 @@ def collatzf(n):
     return  listacollatz   
 
 #a = int(input())
-archivo = open("collatz.txt", 'w')
-fc = 10
+archivo = open("corto1/collatz.txt", 'w')#se crea un archivo de texto para almacenar los datos
+fc = 502 #últimos 3 digitos de mi carnet 201503502
+
 for i in range (2, fc+1):
     print(str(collatzf(i)))
+    archivo.write(str(collatzf(i)))
+    archivo.write("\n")
+
+archivo.close()    
