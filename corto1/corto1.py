@@ -15,5 +15,8 @@ def collatzf(n):
             listacollatz.append(num) #se agrega a la lista
     return  listacollatz   
 
-a = int(input())
-print(str(collatzf(a)))
+#a = int(input())
+archivo = open("collatz.txt", 'w')
+fc = 10
+for i in range (2, fc+1):
+    print(str(collatzf(i)))
